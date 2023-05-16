@@ -1,0 +1,9 @@
+# conda create -n http2https python==3.9.* -y ; conda activate http2https
+gunicorn 
+gunicorn[gevent]
+requests
+Flask
+psutil
+gevent
+pylint
+autopep8
