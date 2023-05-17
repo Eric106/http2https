@@ -13,8 +13,8 @@
 #. /etc/init.d/functions
 
 #Replace your user and workdir
-user=eric
-workdir=/your/workdir/http2https
+user=admin
+workdir=/home/admin/http2https
 
 start() {
     # code to start app comes here
