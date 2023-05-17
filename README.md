@@ -48,6 +48,10 @@ Content of `bind.json`
     "https_port": 8443
 }
 ```
+Create ssl certificates
+```console
+admin@serverB:~/http2https$ openssl req -x509 -newkey rsa:4096 -nodes -out ssl/cert.pem -keyout ssl/key.pem -days 365
+```
 ## Linux Run
 CD into the http2https tool folder
 ```console
