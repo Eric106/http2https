@@ -1,17 +1,21 @@
 # http2https
 Tool to convert a HTTP service into a HTTPS. For example: 
 ```console 
-Subnet: 192.168.0.0/24
-------------------------------------------
-Server A: 192.168.0.10
-HTTP A service: http://192.168.0.10:8080/
-------------------------------------------
-    | ^
-    v |
-------------------------------------------
-Sever B: 192.168.0.2
-HTTPS B service: https://192.168.0.2:8443/
-------------------------------------------
+|------------------------------------------|
+|                  WEB CLIENT              |
+|------------------------------------------|
+                    | ^
+                    v |
+|------------------------------------------|
+|Sever B: 192.168.0.2                      |
+|HTTPS B service: https://192.168.0.2:8443/|
+|------------------------------------------|
+                    | ^
+                    v |
+|------------------------------------------|
+|Server A: 192.168.0.10                    |
+|HTTP A service: http://192.168.0.10:8080/ |
+|------------------------------------------|
 ```
 Here we want to use Sever B as a HTTPS proxy, redirecting all the requests to the HTTP service at Server A. Notice that A and B can be the same server.
 ## Linux Install
