@@ -2,7 +2,7 @@
 Tool to convert a HTTP service into a HTTPS. For example: 
 ```console 
 |------------------------------------------|
-|                  WEB CLIENT              |
+|                WEB CLIENT                |
 |------------------------------------------|
                     | ^
                     v |
