@@ -12,16 +12,18 @@
 # Source function library.
 #. /etc/init.d/functions
 
-workdir=/home/eric/Documents/http2https
+#Replace your user and workdir
+user=eric
+workdir=/your/workdir/http2https
 
 start() {
     # code to start app comes here
-    sudo -u eric bash $workdir/run.sh
+    sudo -u $user bash $workdir/run.sh
 }
 
 stop() {
     # code to stop app comes here
-    sudo -u eric bash $workdir/kill.sh
+    sudo -u $user bash $workdir/kill.sh
 }
 
 case "$1" in 
