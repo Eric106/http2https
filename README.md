@@ -89,7 +89,7 @@ Edit user and workdir in the service description file.
 ```shell
 #Replace your user and workdir
 user=admin
-workdir=/your/workdir/http2https
+workdir=/home/admin/http2https
 ```
 
 Add service to system.
