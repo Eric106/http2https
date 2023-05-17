@@ -1,6 +1,6 @@
 # http2https
 Tool to convert a reachable HTTP service into a HTTPS. For example: 
-```console 
+```shell 
 Subnet: 192.168.0.0/24
 ------------------------------------------
 Server A: 192.168.0.10
@@ -19,25 +19,25 @@ Following the example above, all the following installation is at Server B.
 </br>
 
 Clone this repo:
-```console
+```shell
 admin@serverB:~$ git clone https://github.com/Eric106/http2https
 admin@serverB:~$ cd http2https/
 ```
 Create conda enviroment and activate it:
-```console
+```shell
 admin@serverB:~/http2https$ conda create -n http2https python==3.9.* -y ; conda activate http2https
 ```
 Install tmux:
-```console
+```shell
 admin@serverB:~/http2https$ sudo apt install tmux
 ```
 Then install the requeriments:
-```console
+```shell
 admin@serverB:~/http2https$ pip install -r requierements.txt
 ```
 
 Create the file `bind.json` at the root folder of this tool.
-```console
+```shell
 admin@serverB:~/http2https$ nano bind.json
 ```
 Content of `bind.json`
@@ -50,20 +50,20 @@ Content of `bind.json`
 ```
 ## Linux Run
 CD into the http2https tool folder
-```console
+```shell
 admin@serverB:~$ cd http2https/
 ```
 Activate http2https enviroment
-```console
+```shell
 admin@serverB:~/http2https$ conda activate http2https
 ```
 ### **Run app**
-```console
+```shell
 admin@serverB:~/http2https$ bash run.sh
 ```
 
 ### **Kill app**
-```console
+```shell
 admin@serverB:~/http2https$ bash kill.sh
 ```
 
@@ -73,24 +73,31 @@ This will install the http2https service in your linux system.
 </br>
 
 CD into the http2https tool folder
-```console
+```shell
 admin@serverB:~$ cd http2https/
 ```
 
 First copy the service description file `etc/init.d/http2https` into the `/etc/init.d/` system folder.
-```console
+```shell
 admin@serverB:~/http2https$ sudo cp etc/init.d/http2https /etc/init.d/
 ```
 Set exec permissions to the service description file.
-```console
+```shell
 admin@serverB:~/http2https$ sudo chmod +x /etc/init.d/http2https
 ```
+Edit user and workdir in the service description file.
+```shell
+#Replace your user and workdir
+user=admin
+workdir=/your/workdir/http2https
+```
+
 Add service to system.
-```console
+```shell
 admin@serverB:~/http2https$ sudo update-rc.d http2https defaults
 ```
 Start service.
-```console
+```shell
 admin@serverB:~/http2https$ sudo service http2https start
 ```
 
@@ -99,7 +106,7 @@ This will auto-start http2https service on system reboot.
 </br>
 
 If you have not created your `/etc/rc.local`:
-```console
+```shell
 admin@serverB:~$ sudo nano /etc/rc.local
 ```
 Then paste the following content:
@@ -122,6 +129,6 @@ sudo service http2https start
 exit 0
 ```
 Set exec permissions to the `/etc/rc.local` file.
-```console
+```shell
 admin@serverB:~$ sudo chmod +x /etc/rc.local
 ```
