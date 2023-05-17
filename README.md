@@ -1,5 +1,5 @@
 # http2https
-Tool to convert a reachable HTTP service into a HTTPS. For example: 
+Tool to convert a HTTP service into a HTTPS. For example: 
 ```console 
 Subnet: 192.168.0.0/24
 ------------------------------------------
