@@ -1,6 +1,4 @@
 import psutil
-from math import ceil
-
 
 def main():
 
