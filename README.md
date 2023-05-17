@@ -86,7 +86,7 @@ Set exec permissions to the service description file.
 admin@serverB:~/http2https$ sudo chmod +x /etc/init.d/http2https
 ```
 Edit user and workdir in the service description file.
-```console
+```shell
 #Replace your user and workdir
 user=admin
 workdir=/your/workdir/http2https
