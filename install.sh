@@ -14,10 +14,8 @@ fi
 
 # Execute a conda command
 conda create -n http2https python==3.9.12 -y
-sleep 1
 eval "$(conda shell.bash hook)"
 conda activate http2https
-sleep 5
 pip install -r requirements.txt
 
 # Prompt for the IP address
