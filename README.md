@@ -18,52 +18,43 @@ Tool to convert a HTTP service into a HTTPS. For example:
 |------------------------------------------|
 ```
 Here we want to use Sever B as a HTTPS proxy, redirecting all the requests to the HTTP service at Server A. Notice that A and B can be the same server.
+
+---
+
 ## Linux Install
 Following the example above, all the following installation is at Server B.
-</br>
 
-Clone this repo:
+### **tmux & conda**
+NOTE: You may have installed  `tmux` and `conda`.
+
+To install `tmux` you can do it with:
+```console
+admin@serverB:~$ sudo apt install tmux
+```
+For `conda` you can download the latest installer from [conda.io](https://docs.conda.io/en/latest/miniconda.html) for yout linux distro, for example x86_64: 
+```console
+admin@serverB:~$ wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
+```
+And then installing it with
+```console
+admin@serverB:~$ bash Miniconda3-latest-Linux-x86_64.sh
+```
+### **App**
+Clone this repo and `cd` into the http2https folder:
 ```console
 admin@serverB:~$ git clone https://github.com/Eric106/http2https
 admin@serverB:~$ cd http2https/
 ```
-Create conda enviroment and activate it:
+Run the installer:
 ```console
-admin@serverB:~/http2https$ conda create -n http2https python==3.9.* -y ; conda activate http2https
+admin@serverB:~/http2https$ bash install.sh
 ```
-Install tmux:
-```console
-admin@serverB:~/http2https$ sudo apt install tmux
-```
-Then install the requeriments:
-```console
-admin@serverB:~/http2https$ pip install -r requierements.txt
-```
+---
 
-Create the file `bind.json` at the root folder of this tool.
-```console
-admin@serverB:~/http2https$ nano bind.json
-```
-Content of `bind.json`
-```json
-{
-    "ip" : "192.168.0.10",
-    "http_port": 8080,
-    "https_port": 8443
-}
-```
-Create ssl certificates
-```console
-admin@serverB:~/http2https$ openssl req -x509 -newkey rsa:4096 -nodes -out ssl/cert.pem -keyout ssl/key.pem -days 365
-```
 ## Linux Run
 CD into the http2https tool folder
 ```console
 admin@serverB:~$ cd http2https/
-```
-Activate http2https enviroment
-```console
-admin@serverB:~/http2https$ conda activate http2https
 ```
 ### **Run app**
 ```console
@@ -74,11 +65,11 @@ admin@serverB:~/http2https$ bash run.sh
 ```console
 admin@serverB:~/http2https$ bash kill.sh
 ```
+---
 
 ## Linux Service & auto start (**optional**)
 ### **Service**
 This will install the http2https service in your linux system.
-</br>
 
 CD into the http2https tool folder
 ```console
@@ -111,7 +102,6 @@ admin@serverB:~/http2https$ sudo service http2https start
 
 ### **Auto-start**
 This will auto-start http2https service on system reboot.
-</br>
 
 If you have not created your `/etc/rc.local`:
 ```console

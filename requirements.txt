@@ -1,8 +1,9 @@
-# conda create -n http2https python==3.9.* -y ; conda activate http2https
+# conda create -n http2https python==3.9.12 -y ; conda activate http2https
 gunicorn 
 gunicorn[gevent]
 requests
 Flask
+pyinstaller
 psutil
 gevent
 pylint
