@@ -29,7 +29,7 @@ NOTE: You may have installed  `tmux` and `conda`.
 
 To install `tmux` you can do it with:
 ```console
-admin@serverB:~$ sudo apt install tmux
+admin@serverB:~$ sudo apt install tmux jq
 ```
 For `conda` you can download the latest installer from [conda.io](https://docs.conda.io/en/latest/miniconda.html) for your linux distro, for example x86_64: 
 ```console

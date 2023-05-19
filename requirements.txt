@@ -3,7 +3,6 @@ gunicorn
 gunicorn[gevent]
 requests
 Flask
-pyinstaller
 psutil
 gevent
 pylint
