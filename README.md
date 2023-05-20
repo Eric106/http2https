@@ -52,7 +52,7 @@ And `cd` into the http2https folder:
 ```console
 admin@serverB:~$ cd http2https/
 ```
-Run the installer:
+Run the installer (your user need to have sudo access to install the linux service) :
 ```console
 admin@serverB:~/http2https$ bash install.sh
 ```
@@ -76,6 +76,10 @@ After installation of the linux service you can start, stop and restart it with 
 ### **Run app**
 ```console
 admin@serverB:~$ sudo service http2https start
+```
+### **Check app console**
+```console
+admin@serverB:~$ tmux a -t http2https
 ```
 ### **Kill app**
 ```console
