@@ -123,6 +123,6 @@ if [[ $install_service == "y" || $install_service == "Y" ]]; then
 
     # Give execution permissions to /etc/rc.local
     sudo chmod +x /etc/rc.local
-
+    sudo service "$bind_name" start
     echo "The Linux service has been installed."
 fi

@@ -22,7 +22,7 @@ read -p "Do you want to remove the conda environment? (y/n): " remove_conda
 
 if [[ $remove_conda == "y" || $remove_conda == "Y" ]]; then
     # Remove the conda environment
-    conda env remove -n http2https
+    conda env remove -n http2https -y
     echo "The conda environment 'http2https' has been removed."
 else
     echo "The conda environment 'http2https' was not removed. Please handle it manually if needed."
