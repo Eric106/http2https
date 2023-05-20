@@ -39,6 +39,10 @@ And then installing it with
 ```console
 admin@serverB:~$ bash Miniconda3-latest-Linux-x86_64.sh
 ```
+When the installer prompt if you want to execute "conda init" select yes. the to avoid the activation of the conda base environment use this:
+```console
+admin@serverB:~$ conda config --set auto_activate_base false
+```
 ### **App**
 Clone this repo. ***Note that where you clone the repo, it will be the installation folder. For example i will clone it in the /home directory of the user "admin", so if i don't set a custom bind name for the service, the installation folder will be /home/admin/http2https.*** 
 ```console
