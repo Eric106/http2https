@@ -94,3 +94,6 @@ You just need to Cd into your installation folder
 admin@serverB:~$ cd http2https/
 ```
 And run the following command
+```console
+admin@serverB:~/http2https$ bash uninstall.sh
+```
