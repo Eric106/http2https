@@ -97,7 +97,7 @@ Note that for the installation of the service we have 2 important files:
 ---
 
 ## Uninstall service, auto-start and conda environment
-You just need to Cd into your installation folder 
+You just need to cd into your installation folder 
 ```console
 admin@serverB:~$ cd http2https/
 ```
