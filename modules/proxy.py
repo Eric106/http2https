@@ -9,11 +9,11 @@ def json2dict(path_json: str) -> dict:
     return data
 
 app = Flask(__name__)
+bind_config = json2dict('bind.json')
 
 @app.route('/', defaults={'path': ''})
 @app.route('/<path:path>')
 def proxy(path):
-    bind_config = json2dict('bind.json')
     http_ip = bind_config['ip']
     http_port = bind_config['http_port']
     url = f'http://{http_ip}:{http_port}{request.full_path}'
