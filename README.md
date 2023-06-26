@@ -7,7 +7,7 @@ Tool to convert a HTTP service into a HTTPS. For example:
                     | ^
                     v |
 |------------------------------------------|
-|Sever B: 192.168.0.2                      |
+|Sever B: 192.168.0.2     (http2http)      |
 |HTTPS B service: https://192.168.0.2:8443/|
 |------------------------------------------|
                     | ^
@@ -48,7 +48,7 @@ Clone this repo. ***Note that where you clone the repo, it will be the installat
 ```console
 admin@serverB:~$ git clone https://github.com/Eric106/http2https
 ```
-And `cd` into the http2https folder:
+Then `cd` into the http2https folder:
 ```console
 admin@serverB:~$ cd http2https/
 ```
