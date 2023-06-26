@@ -1,5 +1,5 @@
 # http2https
-Tool to convert a HTTP service into a HTTPS. For example: 
+Linux service that converts http to https. When you can't modify the original http service this tool comes around.  For example: 
 ```console 
 |------------------------------------------|
 |                WEB CLIENT                |
