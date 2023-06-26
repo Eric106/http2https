@@ -39,7 +39,7 @@ And then installing it with
 ```console
 admin@serverB:~$ bash Miniconda3-latest-Linux-x86_64.sh
 ```
-When the installer prompt if you want to execute "conda init" select yes. the to avoid the activation of the conda base environment use this:
+When the installer prompt if you want to execute "conda init" select yes. Then to avoid the activation of the conda base environment use this:
 ```console
 admin@serverB:~$ conda config --set auto_activate_base false
 ```
