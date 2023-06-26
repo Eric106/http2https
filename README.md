@@ -7,7 +7,7 @@ Linux service that converts http to https. When you can't modify the original ht
                     | ^
                     v |
 |------------------------------------------|
-|Sever B: 192.168.0.2     (http2http)      |
+|Sever B: 192.168.0.2     (http2https)     |
 |HTTPS B service: https://192.168.0.2:8443/|
 |------------------------------------------|
                     | ^
