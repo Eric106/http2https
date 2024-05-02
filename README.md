@@ -22,7 +22,7 @@ Here we want to use Sever B as a HTTPS proxy, redirecting all the requests to th
 ---
 
 ## Linux Install
-Following the example above, all the following installation is at Server B.
+Following the example is an installation at Server B.
 
 ### **tmux & conda**
 NOTE: You may have installed  `tmux` and `conda`.
@@ -39,7 +39,7 @@ And then installing it with
 ```console
 admin@serverB:~$ bash Miniconda3-latest-Linux-x86_64.sh
 ```
-When the installer prompt if you want to execute "conda init" select yes. Then to avoid the activation of the conda base environment use this:
+When the installer prompt if you want to execute "conda init" select yes. Then to avoid the automatic activation of the conda base environment use this:
 ```console
 admin@serverB:~$ conda config --set auto_activate_base false
 ```
