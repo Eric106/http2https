@@ -1,5 +1,5 @@
 # http2https
-Linux service that converts http to https. When you can't modify the original http service this tool comes around.  For example: 
+Linux service that converts http to https. For example: 
 ```console 
 |------------------------------------------|
 |                WEB CLIENT                |
