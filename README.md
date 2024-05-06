@@ -44,7 +44,7 @@ When the installer prompt if you want to execute "conda init" select yes. Then t
 admin@serverB:~$ conda config --set auto_activate_base false
 ```
 ### **App**
-Clone this repo. ***Note that where you clone the repo, it will be the installation folder. For example i will clone it in the /home directory of the user "admin", so if I don't set a custom bind name for the service, the installation folder will be /home/admin/http2https.*** 
+Clone this repo. ***Note that where you clone the repo, it will be the installation folder. For example I will clone it in the /home directory of the user "admin", so if I don't set a custom bind name for the service, the installation folder will be /home/admin/http2https.*** 
 ```console
 admin@serverB:~$ git clone https://github.com/Eric106/http2https
 ```
@@ -56,7 +56,7 @@ Run the installer (your user need to have sudo access to install the linux servi
 ```console
 admin@serverB:~/http2https$ bash install.sh
 ```
-This will install the conda environment called http2https, then the python packages needed will be installed. Then it will prompt you for input about the config of your service like : 
+This will install the conda environment called http2https, then the python packages needed will be installed. In the process it will prompt you for input about the config of your service like : 
 
 -`http server ip`
 
@@ -70,7 +70,7 @@ This will install the conda environment called http2https, then the python packa
 
 ---
 
-## Linux run -> **Service**
+## Linux service management -> **Start/Stop/Restart**
 After installation of the linux service you can start, stop and restart it with this simple commands. Assuming that you keep the default service bind name (http2https).
 
 ### **Run app**
