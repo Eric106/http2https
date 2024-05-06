@@ -22,7 +22,7 @@ Here we want to use Sever B as a HTTPS proxy, redirecting all the requests to th
 ---
 
 ## Linux Install
-Following the example is an installation at Server B.
+The following example is an installation at Server B.
 
 ### **tmux & conda**
 NOTE: You may have installed  `tmux` and `conda`.
