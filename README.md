@@ -25,9 +25,9 @@ Here we want to use Sever B as a HTTPS proxy, redirecting all the requests to th
 The following example is an installation at Server B.
 
 ### **tmux & conda**
-NOTE: You may have installed  `tmux` and `conda`.
+> `NOTE ✅` You need to install  `tmux` and `conda`.
 
-To install `tmux `, `jq` and `openssl` you can do it with:
+To install `tumx` and other dependencies use this command:
 ```console
 admin@serverB:~$ sudo apt install tmux jq openssl
 ```
