@@ -18,6 +18,8 @@ eval "$(conda shell.bash hook)"
 conda activate http2https
 pip install -r requirements.txt
 
+clear
+
 # Prompt for the IP address
 read -p "Enter the IP address: " ip
 
