@@ -1,3 +1,4 @@
+from pprint import pprint
 from flask import Flask, request
 import requests
 from json import load
@@ -16,20 +17,22 @@ bind_config = json2dict('bind.json')
 def proxy(path):
     http_ip = bind_config['ip']
     http_port = bind_config['http_port']
-    url = f'http://{http_ip}:{http_port}{request.full_path}'
-    headers = dict(request.headers)
-    headers['Host'] = f'{http_ip}:{http_port}'
+    url = f'http://{http_ip}:{http_port}/{path}'
+    # print('='*50)
+    # pprint(request.headers)
+    try:
+        response = requests.request(
+            method=request.method,
+            url=url,
+            headers={key: value for (key, value) in request.headers},
+            data=request.get_data(),
+            cookies=request.cookies,
+            allow_redirects=False  # Prevent the target service from redirecting
+        )
+    except Exception:
+        return "503 Iternal Server Error", 503
 
-    response = requests.request(
-        method=request.method,
-        url=url,
-        headers=headers,
-        data=request.get_data(),
-        cookies=request.cookies,
-        allow_redirects=False
-    )
-
-    excluded_headers = ['content-encoding', 'content-length', 'transfer-encoding', 'connection']
-    headers = [(name, value) for (name, value) in response.raw.headers.items() if name.lower() not in excluded_headers]
-
-    return response.content, response.status_code, headers
+    # print('-'*50)
+    # pprint(response.headers)
+    # print('='*50)
+    return response.content, response.status_code, dict(response.headers)
