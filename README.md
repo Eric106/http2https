@@ -44,7 +44,7 @@ When the installer prompt if you want to execute "conda init" select yes. Then t
 admin@serverB:~$ conda config --set auto_activate_base false
 ```
 ### **App**
-Clone this repo. ***Note that where you clone the repo, it will be the installation folder. For example i will clone it in the /home directory of the user "admin", so if i don't set a custom bind name for the service, the installation folder will be /home/admin/http2https.*** 
+Clone this repo. ***Note that where you clone the repo, it will be the installation folder. For example i will clone it in the /home directory of the user "admin", so if I don't set a custom bind name for the service, the installation folder will be /home/admin/http2https.*** 
 ```console
 admin@serverB:~$ git clone https://github.com/Eric106/http2https
 ```
